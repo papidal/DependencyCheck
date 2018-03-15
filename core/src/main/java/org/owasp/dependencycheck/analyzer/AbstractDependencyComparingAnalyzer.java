@@ -87,8 +87,8 @@ public abstract class AbstractDependencyComparingAnalyzer extends AbstractAnalyz
      */
     @Override
     protected synchronized void analyzeDependency(Dependency ignore, Engine engine) throws AnalysisException {
-        if (!analyzed) {
-            analyzed = true;
+        //if (!analyzed) {
+            //analyzed = true;
             final Set<Dependency> dependenciesToRemove = new HashSet<>();
 
             final Dependency[] dependencies = engine.getDependencies();
@@ -109,7 +109,7 @@ public abstract class AbstractDependencyComparingAnalyzer extends AbstractAnalyz
             for (Dependency d : dependenciesToRemove) {
                 engine.removeDependency(d);
             }
-        }
+        //}
     }
 
     /**
